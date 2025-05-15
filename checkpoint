@@ -1,0 +1,2 @@
+model_checkpoint_path: "high_HYDICE"
+all_model_checkpoint_paths: "high_HYDICE"
