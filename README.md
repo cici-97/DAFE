@@ -11,23 +11,6 @@ Thus, the code can be roughly understood as consisting of **three main parts**:
 2. **Neural network processing** (in Python)
 3. **Postprocessing** (in MATLAB)
 
-## Detailed Code Steps
-
-1. `./HSIs` contains the five original HSI images used in the paper.
-
-2. Use the code in `./matlab/DFAE_low` to extract the first 188 bands from the original HSI images. The extracted images are stored in `./data_ori`.
-
-3. `./matlab/DFAE_low` is used to extract the **low-frequency** part of the images. The resulting data is saved in `./data_low`.
-
-4. `./matlab/DFAE_high` is used to extract the **high-frequency** part of the images. The resulting data is saved in `./data_high`.
-
-5. `./DFAE_low_train` and `./DFAE_high_train` are used to train the networks on the low-frequency and high-frequency data, respectively. In the paper, the training set is `sandiego1`, which means these Python training scripts take `sandiego1` from `./data_low` and `./data_high` as input.
-
-6. `./DFAE_low_test` and `./DFAE_high_test` are the test scripts. They take other datasets from `./data_low` and `./data_high` as input.
-
-7. The output results of the Python code are saved in `./data_low_res` and `./data_high_res`.
-
-8. `./matlab/DFAE_final_detection` performs the final detection. Relevant parameters (i.e., the area for attribute filtering) should be adjusted based on the size of anomalies. The final detection results are saved in `./data_res`.
 
 ## Citation
 If your find our work are helpful for your research, please cite our paper.
